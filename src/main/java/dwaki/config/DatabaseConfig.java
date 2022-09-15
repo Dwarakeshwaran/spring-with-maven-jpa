@@ -1,4 +1,4 @@
-package config;
+package dwaki.config;
 
 import java.util.Properties;
 
@@ -42,11 +42,11 @@ public class DatabaseConfig {
 	@Bean("dataSource")
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		String userName = "";
-		String password = "";
-		String driver = "";
-		String url = "";
-		String schema = "";
+		String userName = "fittle_user";
+		String password = "password123";
+		String driver = "org.postgresql.Driver";
+		String url = "fittle-db.czivym8uhcuy.us-east-1.rds.amazonaws.com";
+		String schema = "public";
 
 		dataSource.setDriverClassName(driver);
 		dataSource.setUsername(userName);

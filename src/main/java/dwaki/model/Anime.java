@@ -1,4 +1,4 @@
-package model;
+package dwaki.model;
 
 import org.springframework.stereotype.Component;
 

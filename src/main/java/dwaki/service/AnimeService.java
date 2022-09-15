@@ -1,4 +1,4 @@
-package service;
+package dwaki.service;
 
 import org.springframework.stereotype.Service;
 
