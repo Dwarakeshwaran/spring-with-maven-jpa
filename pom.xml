@@ -6,6 +6,8 @@
 
 	<properties>
 		<org.springframework.version>5.3.22</org.springframework.version>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
 	<dependencies>
 		<!-- Spring Dependencies-->
@@ -63,6 +65,11 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.24</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.0.0</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>

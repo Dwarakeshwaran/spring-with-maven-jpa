@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories("repository")
+@EnableJpaRepositories("dwaki.repository")
 public class DatabaseConfig {
 
 	private static final Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
@@ -30,7 +30,7 @@ public class DatabaseConfig {
 		lfb.setDataSource(dataSource());
 		lfb.setJpaVendorAdapter(getJpaVendorAdapter());
 		lfb.setPersistenceProviderClass(HibernatePersistenceProvider.class);
-		lfb.setPackagesToScan("entity");
+		lfb.setPackagesToScan("dwaki.entity");
 		lfb.setJpaProperties(hibernateProps());
 		return lfb;
 	}
@@ -45,7 +45,7 @@ public class DatabaseConfig {
 		String userName = "fittle_user";
 		String password = "password123";
 		String driver = "org.postgresql.Driver";
-		String url = "fittle-db.czivym8uhcuy.us-east-1.rds.amazonaws.com";
+		String url = "jdbc:postgresql://fittle-db.czivym8uhcuy.us-east-1.rds.amazonaws.com:5432/postgres";
 		String schema = "public";
 
 		dataSource.setDriverClassName(driver);
